@@ -13,6 +13,7 @@ load_dotenv()
 BEARER_TOKEN = os.getenv('TWITTER_BEARER_TOKEN')
 
 
+
 def get_image_profile():
     # Get the username input from the user and remove any extra spaces
     username = entry.get().strip()
