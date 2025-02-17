@@ -23,6 +23,9 @@ def get_image_profile():
         profile_label.config(text="Please enter a username.")
         return
 
+    if username.startswith('@'):
+        username = username[1:]
+
     # Build the URL to request user profile data from the Twitter API
     url = f"https://api.twitter.com/2/users/by/username/{username}?user.fields=profile_image_url"
     headers = {"Authorization": f"Bearer {BEARER_TOKEN}"}
